@@ -1,0 +1,139 @@
+/* LPstyle.css - Styles for landing_page.html */
+
+/* Reset some default styles */
+body, h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    color: #222;
+    min-height: 100vh;
+}
+
+/* Header section */
+.header {
+    background: #2d6cdf;
+    color: #fff;
+    padding: 40px 0 30px 0;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Navigation bar */
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(45, 108, 223, 0.08);
+    padding: 15px 0;
+}
+
+.navbar a {
+    color: #2d6cdf;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.2s;
+}
+
+.navbar a:hover {
+    color: #184a8c;
+}
+
+/* Main content section */
+.main {
+    max-width: 900px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(45, 108, 223, 0.07);
+    padding: 40px 32px;
+}
+
+.main h2 {
+    font-size: 2rem;
+    color: #2d6cdf;
+    margin-bottom: 18px;
+}
+
+.main p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 22px;
+}
+
+.features-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-top: 18px;
+}
+
+.features-list li {
+    background: #eaf1fb;
+    color: #184a8c;
+    padding: 18px 22px;
+    border-radius: 10px;
+    flex: 1 1 220px;
+    font-size: 1rem;
+    box-shadow: 0 2px 8px rgba(45, 108, 223, 0.05);
+}
+
+/* Call to action button */
+.cta-btn {
+    display: inline-block;
+    background: #2d6cdf;
+    color: #fff;
+    padding: 16px 38px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: 30px;
+    box-shadow: 0 2px 8px rgba(45, 108, 223, 0.12);
+    transition: background 0.2s;
+}
+
+.cta-btn:hover {
+    background: #184a8c;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 28px 0;
+    background: #f5f7fa;
+    color: #888;
+    font-size: 0.95rem;
+    margin-top: 60px;
+}
+
+/* Responsive design */
+@media (max-width: 700px) {
+    .main {
+        padding: 24px 10px;
+    }
+    .features-list {
+        flex-direction: column;
+        gap: 14px;
+    }
+    .header h1 {
+        font-size: 2rem;
+    }
+}

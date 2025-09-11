@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LORDS SKILL ACADEMY</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Example theme: simple, modern, blue accent -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            background: #011427;
+           
+        }
+        .hero {
+            background: linear-gradient(to right, #163b64 0%, #2b1664 50%, #8e264d 100%);
+            color: #ede8e8;
+            padding: 3rem 0 1rem 3rem;
+            text-align: center;
+            font-size: larger;
+            font-weight: 700;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08); 
+            font: righteous;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        section {
+            margin: 1rem auto;
+            background: #efeff0;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            padding: 2rem;
+            color: #0b0b0b;
+        }
+        .core-offerings {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .offering {
+            flex: 1 1 250px;
+            background: linear-gradient(to right, #163b64 0%, #2b1664 50%, #8e264d 100%);
+            border-radius: 6px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            text-align: center;
+            box-shadow: 0 1px 4px rgba(37,99,235,0.08);
+            color: #ebe7e7;
+        }
+        .offering h3 {
+            margin-top: 0;
+            color: #fff;
+        }
+        .testimonials {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            color: #fff;
+        }
+        .testimonial {
+            flex: 1 1 300px;
+            background: transparent;
+            border-radius: 6px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            font-style: italic;
+            color: #fff;
+        }
+        .youtube-links {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            color: #fff;
+        }
+        .youtube-links a {
+            display: inline-block;
+            background: #082054;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            text-decoration: none;
+            margin-bottom: 1rem;
+            transition: 0.2s;
+        }
+        .youtube-links a:hover {
+            background: #f00707;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background: transparent;
+            color: #fff;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+<header class="header">
+    <div class="container header-container" style="background: #fff;"></div>
+        <a href="/" class="logo-link">
+            <img src="LORDS-LOGO@4x.png" alt="Lords Skill Academy" class="logo" />
+        </a>
+        <nav class="nav">
+            <ul class="nav-list">
+                <li><a href="#" class="nav-link">Home</a></li>
+                <li><a href="#core-offerings" class="nav-link">Core Offerings</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-buttons">
+            <a href="#" class="btn-secondary">Sign In</a>
+            <a href="#" class="btn-primary">Enroll Now</a>
+        </div>
+    </div>
+</header>
+<style>
+    .header {
+        background: whitesmoke;
+        padding: 0.5rem 0;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        position: relative;
+        z-index: 1000;
+    }
+    .header-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+    .logo-link {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        text-decoration: none;
+    }
+    .logo {
+        display: block;
+        width: 150px;
+        height: 50px;
+        object-fit: contain;
+    }
+    .nav {
+        margin-left: 2rem;
+    }
+    .nav-list {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: #0a0a0a;
+    }
+    .nav-link {
+        color: #0d0d0d;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 1.05rem;
+        transition: color 0.2s;
+        letter-spacing: 0.5px;
+        font-family: 'Righteous', sans-serif;
+        justify-content: center;
+
+    }
+    .nav-link:hover {
+        color: #8e264d;
+        text-decoration: underline;
+        text-underline-offset: 4px;
+        text-decoration-thickness: 2px;
+
+    }
+    .header-buttons {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        justify-content: flex-end;
+        margin-left: auto;
+        flex-wrap: wrap;
+        font-size: 1rem;
+        font-weight: 700;
+    }
+    .btn-primary, .btn-secondary {
+        padding: 0.5rem 1.2rem;
+        border-radius: 4px;
+        font-weight: 700;
+        text-decoration: none;
+        font-size: 1rem;
+        transition: background 0.2s, color 0.2s;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        display: inline-block;
+    }
+    .btn-primary {
+        background: #ef8c8c;
+        color: #fff;
+        border: 1px solid #ef8c8c;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+        font-family: 'Righteous', sans-serif;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 1.05rem;
+        padding: 0.6rem 1.5rem;
+        margin-top: 0.2rem;
+        font-weight: 700;
+        transition: background 0.3s, transform 0.2s;
+
+
+    }
+    .btn-primary:hover {
+        background: #c20811;
+    }
+    .btn-secondary {
+        background: #fff;
+        color: #163b64;
+        border: 1px solid #163b64;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+        font-family: 'Righteous', sans-serif;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 1.05rem;
+        padding: 0.6rem 1.5rem;
+        margin-top: 0.2rem;
+        font-weight: 700;
+        transition: background 0.3s, transform 0.2s;    
+    }
+    .btn-secondary:hover {
+        background: #e0e7ff;
+        color: #8e264d;
+        border-color: #8e264d;
+    }
+    @media (max-width: 900px) {
+        .header-container {
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0 1rem;
+            gap: 1rem;
+
+        }
+        .nav-list {
+            gap: 1rem;
+            font-size: 1rem;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-left: 0;
+            margin-top: 0.5rem;
+
+        }
+        .header-buttons {
+            margin-top: 0.5rem;
+            justify-content: center;
+            width: 100%;
+            gap: 0.5rem;
+            font-size: 0.95rem;
+            flex-wrap: wrap;
+            margin-left: 0;
+        }
+    }
+</style>
+  </header>
+    <section class="hero" style="position: relative; overflow: hidden; min-height: 400px;">
+        <img src="assets/_.gif" alt="Hero Background" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; z-index: 0; opacity: 0.35; pointer-events: none;">
+        <div style="position: relative; z-index: 1;">
+            <h1>LORDS SKILL ACADEMY</h1>
+            <p style="font-size: 1.25rem; margin-bottom: 2rem;">
+                Empowering you in Programming, Industry Safety, and Interior Design.
+            </p>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>
+            Lords Skill Academy is dedicated to empowering learners and professionals in programming, industry safety, and interior design. Our mission is to deliver high-quality resources and training to help you excel in your field.
+        </p>
+    </section>
+
+    <section id="core-offerings">
+        <h2> Core Offerings</h2>
+        <div class="core-offerings" style="flex-direction: column;">
+            <div class="offering" style="display: flex; align-items: center; gap: 2rem;">
+                <div style="flex: 1;">
+                    <h3>Programming</h3>
+                    <p>
+                        Learn modern programming languages, frameworks, and best practices.
+                        <a href="index.html">Explore Programming &rarr;</a>
+                    </p>
+                </div>
+                <div style="flex: 1; display: flex; flex-direction: column; align-items: center;">
+                    <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.6.2/dist/dotlottie-wc.js" type="module"></script>
+                    <dotlottie-wc src="https://lottie.host/27cc94ea-1771-4621-8f06-e10b3e08a002/avYljz4hO2.lottie" style="width: 500px; height: 500px;" speed="1" autoplay loop></dotlottie-wc>
+                </div>
+            </div>
+            <div class="offering industry-safety-offering">
+                <div class="offering-content">
+                    <h3>Industry Safety</h3>
+                    <p>
+                        Discover essential industry safety practices, regulations, and tips to ensure a safe working environment.
+                    </p>
+                </div>
+                <div class="offering-animation">
+                    <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.6.2/dist/dotlottie-wc.js" type="module"></script>
+                    <dotlottie-wc src="https://lottie.host/82a0b5e7-cb2e-477a-9933-0ab5bacb9b9b/Mn3j7tYAEp.lottie" style="width: 500px; height: 500px;" speed="1" autoplay loop></dotlottie-wc>
+                </div>
+            </div>
+            <style>
+            .industry-safety-offering {
+                display: flex;
+                align-items: center;
+                gap: 8rem;
+                flex-direction: row-reverse;
+            }
+            .industry-safety-offering .offering-content {
+                flex: 1;
+                text-align: left;
+            }
+            .industry-safety-offering .offering-animation {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-begin;
+            }
+            </style>
+            <div class="offering" style="display: flex; align-items: center; gap: 2rem;">
+                <div style="flex: 1;">
+                    <h3>Interior Design</h3>
+                    <p>
+                        Discover creative interior design concepts, trends, and practical tips to transform spaces beautifully and efficiently.
+                    </p>
+                </div>
+                <div style="flex: 1; display: flex; flex-direction: column; align-items: center;">
+                   <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.6.2/dist/dotlottie-wc.js" type="module"></script>
+                    <dotlottie-wc src="https://lottie.host/b315175e-9853-4092-8952-848058793ea2/sVshQjmND1.lottie" style="width: 500px; height: 500px;" speed="1" autoplay loop></dotlottie-wc>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials">
+        <h2>Testimonials</h2>
+        <div class="testimonials-card-container">
+            <div class="testimonial-card">
+                <p>"LSAfin helped me master programming and land my dream job. Highly recommended!"</p>
+                <span class="testimonial-author">- Alex P.</span>
+            </div>
+            <div class="testimonial-card">
+                <p>"The industry safety resources are top-notch and easy to understand."</p>
+                <span class="testimonial-author">- Jamie L.</span>
+            </div>
+            <div class="testimonial-card">
+                <p>"I loved the interior design tips. My home looks amazing now!"</p>
+                <span class="testimonial-author">- Priya S.</span>
+            </div>
+        </div>
+    </section>
+    <style>
+    .testimonials-card-container {
+        display: flex;
+        gap: 2rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 1.5rem;
+    }
+    .testimonial-card {
+        background: linear-gradient(to right, #163b64 0%, #2b1664 50%, #8e264d 100%);
+        border-radius: 10px;
+        box-shadow: 0 2px 12px rgba(37,99,235,0.12);
+        padding: 2rem 1.5rem;
+        flex: 1 1 300px;
+        max-width: 350px;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .testimonial-card:hover {
+        transform: translateY(-6px) scale(1.03);
+        box-shadow: 0 6px 24px rgba(37,99,235,0.18);
+    }
+    .testimonial-card p {
+        font-style: italic;
+        margin: 0 0 1rem 0;
+        font-size: 1.1rem;
+    }
+    .testimonial-author {
+        font-weight: bold;
+        color: #f5f0f2;
+        font-size: 1rem;
+        align-self: flex-end;
+    }
+    @media (max-width: 900px) {
+        .testimonials-card-container {
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
+        }
+        .testimonial-card {
+            max-width: 100%;
+        }
+    }
+    </style>
+
+    <section id="youtube">
+        <h2>Watch Us on YouTube</h2>
+        <div class="youtube-links">
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <span style="font-weight: bold; color: #0c0c0c; margin-bottom: 0.5rem;">Python Bootcamp</span>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/FsYTit41U_s?si=rfO1IWWdi4LWh8As" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: center; margin-top: 2rem;">
+            <span style="font-weight: bold; color: #000; margin-bottom: 0.5rem;">Webinar on Coding in AI Agentic Era</span>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/JKyG3XLlvfk?si=4n08B6JjlPLdqH6F" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2024 LSAfin. All rights reserved.
+    </footer>
+</body>
+</html></div>
