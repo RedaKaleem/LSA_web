@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Interior Design Program</title>
+    <style>
+        :root {
+            --beige-bg: #f5f3ee;
+            --beige-light: #f9f7f3;
+            --beige-dark: #e5dfd2;
+            --accent: #bfae9e;
+            --text: #3a3327;
+            --muted: #8d8577;
+            --white: #fff;
+        }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            background: var(--beige-bg);
+            color: var(--text);
+        }
+        header {
+            background: var(--beige-light);
+            color: var(--text);
+            padding: 2rem 0;
+            text-align: center;
+            border-bottom: 1px solid var(--beige-dark);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.2rem;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+        section {
+            max-width: 900px;
+            margin: 2rem auto;
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(191,174,158,0.04);
+        }
+        h2 {
+            color: var(--text);
+            margin-top: 0;
+            font-weight: 500;
+        }
+        ul {
+            padding-left: 1.5rem;
+        }
+        .perks li {
+            margin-bottom: 0.7rem;
+            font-size: 1.1rem;
+        }
+        .footer {
+            text-align: center;
+            color: var(--muted);
+            padding: 1rem 0;
+            font-size: 0.95rem;
+        }
+        nav {
+            background: var(--beige-dark);
+            padding: 1rem 0;
+            text-align: center;
+            border-bottom: 1px solid var(--beige-light);
+        }
+        nav a {
+            color: var(--text);
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            margin: 0 1rem;
+            transition: color 0.2s;
+        }
+        nav a:hover {
+            color: var(--accent);
+        }
+        /* Minimalistic slideshow */
+        #slideshow-header {
+            position: relative;
+            background: var(--beige-light);
+            color: var(--text);
+            padding: 3rem 0 2.5rem 0;
+            text-align: left;
+            border-radius: 0 0 24px 24px;
+            box-shadow: none;
+            overflow: hidden;
+        }
+        #slideshow-header h1,
+        #slideshow-header p {
+            text-align: center;
+            text-shadow: none;
+        }
+        .slideshow-images img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            transition: opacity 1s;
+            filter: grayscale(0.1) brightness(0.97) contrast(0.98);
+        }
+        .slideshow-images img.active {
+            opacity: 1;
+        }
+        /* Perks list minimal style */
+        .perks {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .perks li {
+            background: var(--beige-light);
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            padding: 1rem 1.2rem;
+            display: flex;
+            align-items: flex-start;
+            color: var(--text);
+            box-shadow: 0 1px 4px rgba(191,174,158,0.04);
+        }
+        .perks li span:first-child {
+            font-size: 1.3rem;
+            margin-right: 0.8rem;
+            color: var(--accent);
+        }
+        /* Responsive */
+        @media (max-width: 700px) {
+            section, .footer {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+            .slideshow-images {
+                min-height: 180px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div data-barba="wrapper" style="background: var(--beige-bg); min-height: 100vh;">
+        <div data-barba="container" data-barba-namespace="design" style="box-shadow: none; border-radius: 0 0 32px 32px; overflow: hidden;">
+            <header id="slideshow-header">
+                <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 320px;">
+                    <h1 style="font-size: 2.5rem; font-family: 'Georgia', serif; font-weight: 700; letter-spacing: 1px; margin-bottom: 0.7rem;"></h1>
+                        Transform Spaces, Inspire Lives
+                    </h1>
+                    <p style="font-size: 1.3rem; font-weight: 400; margin: 0 auto; max-width: 700px; color: var(--muted); letter-spacing: 1px;">
+                        Join our Modern Interior Design Program and shape the future of interiors
+                    </p>
+                </div>
+                <div class="slideshow-images" style="position: absolute; inset: 0; z-index: 0; min-height: 220px;"></div>
+                    <img src="WhatsApp Image 2025-08-20 at 20.19.50.jpeg" class="active" alt="Interior 1">
+                    <img src="WhatsApp Image 2025-08-20 at 20.15.46 (1).jpeg" alt="Interior 2">
+                    <img src="WhatsApp Image 2025-08-20 at 20.15.46 (2).jpeg" alt="Interior 3">
+                    <img src="WhatsApp Image 2025-08-20 at 20.15.46 (3).jpeg" alt="Interior 4">
+                </div>
+                <nav>
+                    <a href="landing_page.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="landing_page.html#core-offerings">Core Offerings</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+            </header>
+            <script>
+                // Minimal fading slideshow
+                (function() {
+                    document.addEventListener('DOMContentLoaded', function() {
+                        const slideshow = document.querySelector('#slideshow-header .slideshow-images');
+                        if (!slideshow) return;
+                        const images = slideshow.querySelectorAll('img');
+                        if (!images.length) return;
+                        let current = 0;
+                        images.forEach((img, i) => {
+                            img.classList.toggle('active', i === 0);
+                        });
+                        setInterval(() => {
+                            images[current].classList.remove('active');
+                            current = (current + 1) % images.length;
+                            images[current].classList.add('active');
+                        }, 3500);
+                    });
+                })();
+            </script>
+            <section> 
+                <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 2.5rem; padding: 3rem 0 2.5rem 0;">
+                    <div style="flex: 1 1 300px; min-width: 300px;">
+                        <h2 style="font-size: 1.5rem; font-family: 'Georgia', serif; font-weight: 400; letter-spacing: 1px; margin-bottom: 0.5rem;">
+                            ABOUT
+                        </h2>
+                        <div style="color: var(--muted); font-size: 1rem; margin-bottom: 2.5rem;">
+                            Makers &amp; innovators, for the love of the craft
+                        </div>
+                        <div style="margin-bottom: 1.5rem;">
+                            <div style="font-size: 0.85rem; letter-spacing: 1px; font-weight: 600; color: var(--accent); text-transform: uppercase;">
+                                Dreaming &amp; Scheming
+                            </div>
+                            <div style="font-size: 0.98rem; color: var(--text);">
+                                Turning strategy into design value with a twist of creativity.
+                            </div>
+                        </div>
+                        <div>
+                            <div style="font-size: 0.85rem; letter-spacing: 1px; font-weight: 600; color: var(--accent); text-transform: uppercase;">
+                                A Little Alchemy
+                            </div>
+                            <div style="font-size: 0.98rem; color: var(--text);">
+                                We create interiors, experiences, and brands, positioning them to be impossible to ignore. Crafting a world of better spaces.
+                            </div>
+                        </div>
+                    </div>
+                    <div style="flex: 2 1 350px; min-width: 260px; font-size: 1.1rem; color: var(--text); line-height: 1.5;">
+                        Our Modern Interior Design Program is a worldwide initiative for creative minds eager to redefine living and working spaces. We partner with those who want to transform environments, attract the right audience, and stand out. Our nimble team of designers and mentors focuses on creating uniquely human, culturally informed, and <span style="font-style: italic;">aesthetically relevant</span> interiors and experiences.
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 2.5rem;">
+                    <div style="flex: 1 1 260px; min-width: 220px;">
+                        <h2 style="font-size: 1.5rem; font-family: 'Georgia', serif; font-weight: 400; letter-spacing: 1px; margin-bottom: 0.5rem;">
+                            MODERN INTERIOR DESIGN
+                        </h2>
+                        <div style="color: var(--muted); font-size: 1rem; margin-bottom: 2.5rem;">
+                            Clean lines, open spaces, and functional beauty
+                        </div>
+                        <div style="margin-bottom: 1.5rem;">
+                            <div style="font-size: 0.85rem; letter-spacing: 1px; font-weight: 600; color: var(--accent); text-transform: uppercase;">
+                                Trends &amp; Techniques
+                            </div>
+                            <div style="font-size: 0.98rem; color: var(--text);">
+                                Explore the latest materials, technologies, and design philosophies shaping modern interiors.
+                            </div>
+                        </div>
+                        <div>
+                            <div style="font-size: 0.85rem; letter-spacing: 1px; font-weight: 600; color: var(--accent); text-transform: uppercase;">
+                                Bringing Concepts to Life
+                            </div>
+                            <div style="font-size: 0.98rem; color: var(--text);">
+                                Develop the skills to turn innovative ideas into beautiful, functional spaces that inspire.
+                            </div>
+                        </div>
+                    </div>
+                    <div style="flex: 2 1 350px; min-width: 260px; font-size: 1.1rem; color: var(--text); line-height: 1.5;">
+                        Modern interior design emphasizes simplicity, openness, and a harmonious blend of form and function. Our program guides you through the essentials of contemporary design, empowering you to create interiors that are both stylish and practical.
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2 style="font-size: 1.5rem; font-family: 'Georgia', serif; font-weight: 400; letter-spacing: 1px; margin-bottom: 1rem; color: var(--text);">
+                    Program Details &amp; Perks
+                </h2>
+                <ul class="perks">
+                    <li>
+                        <span>&#10003;</span>
+                        <span><strong>Real Projects, Real Experiences:</strong> Work on live projects to gain hands-on experience.</span>
+                    </li>
+                    <li>
+                        <span>&#127891;</span>
+                        <span><strong>Recognized Certification:</strong> Earn a certificate that is valued in the industry.</span>
+                    </li>
+                    <li>
+                        <span>&#128101;</span>
+                        <span><strong>Personal Attention and Mentorship:</strong> Benefit from one-on-one guidance from experienced mentors.</span>
+                    </li>
+                    <li>
+                        <span>&#128196;</span>
+                        <span><strong>Building Portfolios:</strong> Create a professional portfolio to showcase your skills to employers and clients.</span>
+                    </li>
+                    <li>
+                        <span>&#127942;</span>
+                        <span><strong>Accredited by SBTET:</strong> Our program is accredited by the State Board of Technical Education and Training.</span>
+                    </li>
+                    <li>
+                        <span>&#128640;</span>
+                        <span><strong>Career Growth:</strong> Unlock new career opportunities and advance in the field of interior design.</span>
+                    </li>
+                </ul>
+            </section>
+
+            <div class="footer">
+                &copy; 2024 Modern Interior Design Program. All rights reserved.
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/@barba/core"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        if (window.barba) {
+          barba.init({
+            transitions: [{
+              name: 'fade',
+              leave(data) {
+                return gsap.to(data.current.container, {opacity: 0, duration: 0.5});
+              },
+              enter(data) {
+                return gsap.from(data.next.container, {opacity: 0, duration: 0.5});
+              }
+            }]
+          });
+        }
+      });
+    </script>
+</body>
+</html></div>
